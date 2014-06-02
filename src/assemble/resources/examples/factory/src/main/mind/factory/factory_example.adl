@@ -1,0 +1,4 @@
+@Singleton
+composite factory.factory_example {
+	contains boot.GenericApplication<factory.FactoryExample> as genericapplication;
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"./dtd/docbookx.dtd" [
+<!ENTITY % myents SYSTEM "./shared.ent">
+%myents;
+]>
+<book status="draft" version="0.1" xmlns="http://docbook.org/ns/docbook">
+  <bookinfo>
+    <title>ZigBee sensor, a MIND C++ Example</title>
+  </bookinfo>
+
+  <chapter>
+    <title>Document history</title>
+
+    <table frame="all">
+      <title>Document history</title>
+
+      <tgroup align="left" cols="4" colsep="0.2" rowsep="1">
+        <thead>
+          <row>
+            <entry>Version</entry>
+
+            <entry>Date</entry>
+
+            <entry>Author</entry>
+
+            <entry>Description</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry>0.1</entry>
+
+            <entry>21/02/2014</entry>
+
+            <entry>Yves Teissier</entry>
+
+            <entry>Document creation</entry>
+          </row>
+
+          <row>
+            <entry>0.2</entry>
+
+            <entry>09/04/2014</entry>
+
+            <entry>Yves Teissier</entry>
+
+            <entry>Add class diagrams</entry>
+          </row>
+
+          <row>
+            <entry>0.3</entry>
+
+            <entry>28/04/2014</entry>
+
+            <entry>Yves Teissier</entry>
+
+            <entry>Add import project in Eclipse section</entry>
+          </row>
+
+          <row>
+            <entry>0.4</entry>
+
+            <entry>27/05/2014</entry>
+
+            <entry>Yves Teissier</entry>
+
+            <entry>Remove anonymous definition in the composite
+            ZigBeeStack</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </chapter>
+
+  <chapter>
+    <title>Introduction</title>
+
+    <section>
+      <para>This example is dedicated to illustrate the usage of
+      mindc++.</para>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Overview</title>
+
+    <section>
+      <para>This overview shows the global example architecture. An UML
+      component diagram (internal block diagram) has naturally been used in
+      order to have a "component" representation.</para>
+    </section>
+
+    <section id="examplecpp01-02">
+      <formalpara/>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>MIND C++ model</title>
+
+    <section/>
+  </chapter>
+</book>

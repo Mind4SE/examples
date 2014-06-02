@@ -1,0 +1,4 @@
+@Singleton
+composite lcc.lcc_example {
+	contains boot.GenericLCCApplication<lcc.SimpleLCC> as genericlccapplication;
+}

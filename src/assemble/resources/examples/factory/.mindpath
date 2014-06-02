@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mindpath>
+	<mindpathentry kind="SOURCE" path="/factory/runtime"/>
+	<mindpathentry kind="SOURCE" path="/factory/src/main/mind"/>
+	<mindpathentry kind="SOURCE" path="/factory/src/test/mind"/>
+	<mindpathentry kind="APPLI" path="factory.factory_example:factory_example"/>
+</mindpath>
