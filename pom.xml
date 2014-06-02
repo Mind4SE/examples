@@ -7,38 +7,16 @@
 
        </parent>
  --> 
-  <name>mindc-examples</name>
+  <name>examples</name>
   <description>Mindc Examples</description>
   
   <groupId>org.ow2.mind</groupId>
-  <artifactId>mindc-examples</artifactId>
+  <artifactId>examples</artifactId>
   <version>0.1.1-SNAPSHOT</version>
 
   <packaging>pom</packaging>
   
- <!-- <dependencies>
-   	<dependency>
-	        <version>${project.version}</version>
-	        <groupId>${project.groupId}</groupId>
-  		<artifactId>adl-backend-cpp</artifactId>
-  	</dependency>
-  	<dependency>
-                <version>${project.version}</version>
-                <groupId>${project.groupId}</groupId>
-  		<artifactId>fractal-runtime-cpp</artifactId>
-  	</dependency>
-  	<dependency>
-                <version>${project.version}</version>
-                <groupId>${project.groupId}</groupId>
-  		<artifactId>idl-backend-cpp</artifactId>
-  	</dependency>
-  	<dependency>
-  		<groupId>${project.groupId}</groupId>
-  		<artifactId>idl-frontend-cpp</artifactId>
-  		<version>${project.version}</version>
-  	</dependency> 
-  </dependencies> -->
-  
+ 
   <build>
         <plugins>
             <plugin>
@@ -57,23 +35,6 @@
                             </descriptors>
                         </configuration>
                     </execution>
-
-                    <!-- Generates directory assembly for integration test -->
-                    <!--execution>
-                        <id>bin-dir</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>directory-single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptors>
-                                <descriptor>src/assemble/bin-release.xml</descriptor>
-                            </descriptors>
-                            <outputDirectory>
-                                ${project.build.directory}
-							</outputDirectory>
-                        </configuration>
-                    </execution-->
                 </executions>
             </plugin>
 
@@ -229,34 +190,6 @@
                     <xincludeSupported>true</xincludeSupported>
                 </configuration>
             </plugin>
-
-<!-- TO BE ENABLED (Once examples have been written) -->
-<!-- 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <configuration>
-                    <executable>make</executable>
-                    <workingDirectory>
-                        ${project.build.directory}/${project.build.finalName}-bin/${project.build.finalName}/examples
-					</workingDirectory>
-                    <arguments>
-                        <argument>MIND_ROOT=../../</argument>
-                        <argument>clean</argument>
-                        <argument>all</argument>
-                    </arguments>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>test assembly (compile helloworld)</id>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <phase>integration-test</phase>
-                    </execution>
-                </executions>
-            </plugin>
--->
         </plugins>
     </build>
     
