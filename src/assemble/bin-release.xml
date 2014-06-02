@@ -6,33 +6,7 @@
         <format>tar.bz2</format>
     </formats>
     <includeBaseDirectory>true</includeBaseDirectory>
-    <dependencySets>
 
-       <!--  <dependencySet>
-            <outputDirectory>ext</outputDirectory>
-            <includes>
-                <include>${project.groupId}:adl-backend-cpp</include>
-                <include>${project.groupId}:idl-backend-cpp</include>
-                <include>${project.groupId}:id ntend-cpp</include>
-            </includes>
-            <fileMode>0644</fileMode>
-        </dependencySet>
-
-        <dependencySet>
-            <unpack>true</unpack>
-            <unpackOptions>
-                <excludes>
-                    <exclude>META-INF/**</exclude>
-                </excludes>
-            </unpackOptions>
-            <includes>
-                <include>${project.groupId}:fractal-runtime-cpp</include>
-            </includes>
-            <outputDirectory>runtime</outputDirectory>
-            <fileMode>0644</fileMode>
-        </dependencySet> -->
-
-    </dependencySets>
     <fileSets>
         <fileSet>
             <directory>src/assemble/resources/examples</directory>
@@ -42,35 +16,16 @@
              <useDefaultExcludes>false</useDefaultExcludes>
              <excludes>
 	             <exclude>**/target/**</exclude>
-				<!-- <exclude>**/docbkx/**</exclude>
-				<exclude>**/site/**</exclude>
-				
-				<exclude>**/.metadata/**</exclude>
-				<exclude>**/.settings/**</exclude>
-				<exclude>**/.localmindrepo/**</exclude>
-				<exclude>**/GeneratedCode/**</exclude>
-				<exclude>**/Pure_cpp_implementation/**</exclude> -->
+	             <exclude>Makefile</exclude>
           	</excludes>
         </fileSet>
     </fileSets>
-    <files>
-    <!--     <file>
-            <source>src/assemble/resources/mindc++</source>
-            <fileMode>0755</fileMode>
-            <outputDirectory>bin</outputDirectory>
-            <filtered>true</filtered>
-        </file>
-        <file>
-            <source>src/assemble/resources/mindc++.bat</source>
-            <fileMode>0755</fileMode>
-            <outputDirectory>bin</outputDirectory>
-            <filtered>true</filtered>
-        </file> -->
+    <!-- <files>
         <file>
         	<source>target/site/mindc-examples.pdf</source>
         	<fileMode>0644</fileMode>
             <outputDirectory>examples</outputDirectory>
-            <!--<filtered>true</filtered>-->
+            <filtered>true</filtered>
         </file>
-    </files>
+    </files> -->
 </assembly>
