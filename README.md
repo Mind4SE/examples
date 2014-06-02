@@ -1,4 +1,4 @@
-mindc-examples
+examples
 ==============
 
 Mindc examples.
