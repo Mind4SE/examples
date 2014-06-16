@@ -62,8 +62,8 @@ composite factory.FactoryExample extends ApplicationType {
         printf("In simpleApp.\n");
         return 0;
       }
-    }}
-  }
+    }};
+  };
 
   /**
    * The forwarderFactory component is a factory of Forwarder component. This
