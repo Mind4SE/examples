@@ -1,4 +1,4 @@
-EXAMPLES = helloworld lifecycle factory
+EXAMPLES = $(patsubst %/,%, $(sort $(dir $(wildcard */))))
 
 all: $(EXAMPLES:%=%.all)
 clean: $(EXAMPLES:%=%.clean)
