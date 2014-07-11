@@ -13,11 +13,10 @@
             <filtered>false</filtered>
             <outputDirectory>examples</outputDirectory>
             <fileMode>0644</fileMode>
-             <useDefaultExcludes>false</useDefaultExcludes>
-             <excludes>
-	             <exclude>**/target/**</exclude>
-	             <exclude>Makefile</exclude>
-          	</excludes>
+            <useDefaultExcludes>false</useDefaultExcludes>
+            <excludes>
+                <exclude>**/target/**</exclude>
+            </excludes>
         </fileSet>
     </fileSets>
     <!-- <files>
