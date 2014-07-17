@@ -39,7 +39,7 @@
 		<link>
 			<name>runtime</name>
 			<type>2</type>
-			<location>C:/MINDWorkshop/mind/runtime</location>
+			<location>C:/Mind/runtime</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -2,6 +2,5 @@
 <mindpath>
 	<mindpathentry kind="SOURCE" path="/lifecycle/runtime"/>
 	<mindpathentry kind="SOURCE" path="/lifecycle/src/main/mind"/>
-	<mindpathentry kind="SOURCE" path="/lifecycle/src/test/mind"/>
 	<mindpathentry kind="APPLI" path="lcc.lcc_example:lcc_example"/>
 </mindpath>
