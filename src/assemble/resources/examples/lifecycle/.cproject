@@ -19,7 +19,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.1549171941." name="/" resourcePath="">
 						<toolChain errorParsers="" id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.315170222" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug.1198048360" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
-							<builder buildPath="${project_loc}" cleanBuildTarget="CONFIGURATION=${ConfigName} clean" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1549171941.812947035" incrementalBuildTarget="CONFIGURATION=${ConfigName} compile" managedBuildOn="false" name="Gnu Make Builder.Preference Configuration" superClass="org.eclipse.cdt.build.core.settings.default.builder">
+							<builder buildPath="${project_loc}" cleanBuildTarget="CONFIGURATION=${ConfigName} clean" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1549171941.812947035" incrementalBuildTarget="CONFIGURATION=${ConfigName} compile" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="/lifecycle/target"/>
 								</outputEntries>
@@ -31,7 +31,7 @@
 							<tool errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.677325476" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base">
 								<option id="gnu.c.compiler.option.optimization.level.979693298" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level"/>
 								<option id="gnu.c.compiler.option.debugging.level.946397844" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level"/>
-								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2142072943" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2142072943" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;METH(interface,method ...)=method##interface&quot;"/>
 									<listOptionValue builtIn="false" value="IS_BOUND(interface)=(interface!=0)"/>
 									<listOptionValue builtIn="false" value="GET_COLLECTION_SIZE(interface)=0"/>
@@ -61,9 +61,8 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="/lifecycle/src/main/mind"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="/lifecycle/src/test/mind"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="/lifecycle/runtime"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="runtime"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/main/mind"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -123,14 +122,6 @@
 				<useDefaultCommand>true</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
-			<target name="clean_all" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
-				<buildCommand>make</buildCommand>
-				<buildArguments/>
-				<buildTarget>CONFIGURATION=${ConfigName} clean_all</buildTarget>
-				<stopOnError>true</stopOnError>
-				<useDefaultCommand>true</useDefaultCommand>
-				<runAllBuilders>true</runAllBuilders>
-			</target>
 			<target name="graph" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>make</buildCommand>
 				<buildArguments/>
@@ -151,6 +142,22 @@
 				<buildCommand>make</buildCommand>
 				<buildArguments/>
 				<buildTarget>CONFIGURATION=${ConfigName} test</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="clean_compile" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>CONFIGURATION=${ConfigName} clean_compile</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="dependencies" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>CONFIGURATION=${ConfigName} dependencies</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>true</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
