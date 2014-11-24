@@ -1,18 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-<!--        <parent>
-        <groupId>org.ow2.mind</groupId>
-       <artifactId>mind-cpp</artifactId>
+  <parent>
+    <groupId>org.ow2.mind</groupId>
+    <artifactId>mind-compiler</artifactId>
+    <version>2.2-SNAPSHOT</version>
+  </parent>
 
-       </parent>
- --> 
   <name>examples</name>
   <description>Mindc Examples</description>
   
-  <groupId>org.ow2.mind</groupId>
   <artifactId>examples</artifactId>
-  <version>2.1-SNAPSHOT</version>
 
   <packaging>pom</packaging>
   
@@ -61,21 +60,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-                <configuration>
-                    <!-- Sub modules have the same version as this one. -->
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-
-                    <!--
-                        Workaround of
-                        http://jira.codehaus.org/browse/MJAVADOC-276. Force
-                        installation of artifacts at preparation stage
-                    -->
-                    <preparationGoals>clean install</preparationGoals>
-                </configuration>
             </plugin>
 
             <plugin>
