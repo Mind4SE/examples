@@ -37,6 +37,7 @@
                 </executions>
             </plugin>
 
+            <!-- User documentation generation -->
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
 				<version>2.5</version>
@@ -67,6 +68,7 @@
                 <artifactId>docbkx-maven-plugin</artifactId>
                 <inherited>false</inherited>
                 <executions>
+                    <!-- User Guide PDF execution -->
                     <execution>
                         <id>pdf</id>
                         <phase>prepare-package</phase>
@@ -76,11 +78,11 @@
                         <inherited>false</inherited>
                         <configuration>
                             <targetDirectory>${project.build.directory}/site</targetDirectory>
-			    <sourceDirectory>${basedir}/src/docbkx</sourceDirectory>
-                            <foCustomization>${basedir}/src/docbkx/xsl/minddoc-fo.xsl</foCustomization>
-                            <draftWatermarkImage>${basedir}/src/docbkx/images/draft.png</draftWatermarkImage>
+                            <foCustomization>${project.build.directory}/site/xsl/minddoc-fo.xsl</foCustomization>
+                            <draftWatermarkImage>${project.build.directory}/site/images/draft.png</draftWatermarkImage>
                         </configuration>
                     </execution>
+                    <!-- User Guide HTML executions -->
                     <execution>
                         <id>html-printable</id>
                         <phase>prepare-package</phase>
@@ -90,13 +92,11 @@
                         <inherited>false</inherited>
                         <configuration>
                             <targetDirectory>${project.build.directory}/site/printable</targetDirectory>
-			    <sourceDirectory>${basedir}/src/docbkx</sourceDirectory>
                             <imgSrcPath>../</imgSrcPath>
-                            <htmlCustomization>${basedir}/src/docbkx/xsl/minddoc-html-printable.xsl</htmlCustomization>
+                            <htmlCustomization>${project.build.directory}/site/xsl/minddoc-html-printable.xsl</htmlCustomization>
                             <htmlStylesheet>../css/docbook-printable.css</htmlStylesheet>
                         </configuration>
                     </execution>
-                    <!-- User Guide HTML executions -->
                     <execution>
                         <id>userguide-html</id>
                         <phase>prepare-package</phase>
@@ -106,9 +106,8 @@
                         <inherited>false</inherited>
                         <configuration>
                             <includes>mindc-examples.xml</includes>
-			    <sourceDirectory>${basedir}/src/docbkx</sourceDirectory>
                             <targetDirectory>${project.build.directory}/site</targetDirectory>
-                            <htmlCustomization>${basedir}/src/docbkx/xsl/minddoc-html.xsl</htmlCustomization>
+                            <htmlCustomization>${project.build.directory}/site/xsl/minddoc-html.xsl</htmlCustomization>
                             <htmlStylesheet>css/docbook.css</htmlStylesheet>
                             <customizationParameters>
                                 <parameter>
@@ -140,10 +139,9 @@
                         <configuration>
                             <includes>mindc-examples.xml</includes>
                             <chunkedOutput>true</chunkedOutput>
-			    <sourceDirectory>${basedir}/src/docbkx</sourceDirectory>
                             <targetDirectory>${project.build.directory}/site/userGuide</targetDirectory>
                             <imgSrcPath>../</imgSrcPath>
-                            <htmlCustomization>${basedir}/src/docbkx/xsl/minddoc-chunk.xsl</htmlCustomization>
+                            <htmlCustomization>${project.build.directory}/site/xsl/minddoc-chunk.xsl</htmlCustomization>
                             <htmlStylesheet>../css/docbook-chunk.css</htmlStylesheet>
                             <customizationParameters>
                                 <parameter>
@@ -169,9 +167,6 @@
                 <configuration>
 		    <sourceDirectory>${basedir}/src/docbkx</sourceDirectory>
                     <targetDirectory>${project.build.directory}/site</targetDirectory>
-                    <xslthlConfig>${basedir}/src/docbkx/xsl/xslthl-config.xml</xslthlConfig>
-                    <highlightSource>1</highlightSource>
-                    <xincludeSupported>true</xincludeSupported>
                 </configuration>
             </plugin>
         </plugins>
